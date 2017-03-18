@@ -1,7 +1,7 @@
 import random
-N = 20
+N = 10
 M = 1000
-C = 2
+C = 5
 L = 2
 
 
