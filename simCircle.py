@@ -2,7 +2,7 @@ import random
 
 UP = 2
 DOWN = 1
-N = 1000000000
+N = 100000000
 
 
 def go(up, down):

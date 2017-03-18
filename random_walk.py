@@ -1,8 +1,8 @@
 import random
 N = 10
 M = 1000
-C = 5
-L = 2
+C = 2
+L = 1
 
 
 def create_clique(a_or_b, size):
@@ -51,14 +51,18 @@ for pair in create_clique('b', C):
 neighbors['w'] = []
 neighbors['v'] = []
 neighbors['u'] = []
-neighbors['v'] += ['a', 'x0']
-neighbors['w'] += ['x'+str(L-1), 'b']
+#neighbors['v'] += ['a', 'x0']
+#neighbors['w'] += ['x'+str(L-1), 'b']
+
+neighbors['v'] += ['a', 'w']
+neighbors['w'] += ['v', 'b']
+
 neighbors['u'] += ['a', 'b']
 neighbors['a'] += ['v', 'u']
 neighbors['b'] += ['w', 'u']
 
-for x in create_bridge('v','w', L):
-    neighbors[x[0]] = x[1]
+#for x in create_bridge('v','w', L):
+#    neighbors[x[0]] = x[1]
 
 print(neighbors)
 
